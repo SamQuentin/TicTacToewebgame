@@ -1,0 +1,164 @@
+*{
+   margin: 0;
+   padding: 0;
+
+}
+
+.mainnav{
+    background-color:rgb(255, 81, 0);
+    color:black;
+    height: 50px;
+    font-size: 22px;
+    font-family:sans-serif;
+    display: flex;
+    align-items:center;
+    padding: 0 5px;
+
+}
+
+
+.mainnav ul{
+    list-style-type: none;
+    padding: 15px;
+}
+
+.gameContainer{
+    background-color: rgb(154, 255, 60);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    
+}
+.gameinfo{
+    padding: 0 34px;
+    font-size: 20px;
+}
+.gameinfo h1{
+    font-size:2.0rem;
+}
+.info{
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.box{
+    border: 2px solid black;
+    font-size:8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(199, 248, 176);
+}
+
+.imgbox img{
+    width:0px ;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    background-color: rgb(255, 147, 59);
+    color: white;
+    border-width: 1px;
+    border-style: double;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 90px;
+    margin:0 23px;
+}
+.line{
+    background-color: rgb(0, 27, 32);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    
+}
+@media screen and (max-width:800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
+.nav2{
+    background-color: white;
+    height: 90px;
+    align-items: center;
+    justify-content: left;
+    font-size: 22px;
+    display: flex;
+    padding: 0 34px;
+}
+.button2{
+    background-color:rgb(248, 86, 58) ;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin:5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s;
+    width: 200px;
+}
+
+.button2 span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button2 span:after{
+    content:  '\00bb';
+    position:absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button2:hover span{
+    padding-right: 25px;
+}
+.button2:hover span::after{
+    opacity: 1;
+    right: 0;
+}
